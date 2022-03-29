@@ -11,3 +11,4 @@ git commit -m "added testfile"
 
 git push
 
+If the user wants to pull data from Github use the code "git pull"
