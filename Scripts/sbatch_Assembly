@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBTACH -n 2
+#SBATCH -t 07:00:00
+#SBATCH -J Genome_Assembly_PacBIO_2022-03-30-16:38
+#SBATCH -o Genome_Assembly_PacBIO-2022-03-30.log 
+#SBATCH -e Genome_Assembly_PacBIO-2022-03-30.err 
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa
+module load canu/2.0
+
+
+
+#Command
+
+canu \
+ -p Genome_assembly_Pacbio-30-03-16.38 -d /home/samuel50/Genom_Analysis/Genomic_Data  \
+ genomeSize=2.4m \
+ -pacbio /home/samuel50/Genom_Analysis/Genomic_Data/PACBIO_data/data/*
