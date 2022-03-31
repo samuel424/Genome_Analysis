@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBTACH -n 2
+#SBATCH -t 02:00:00
+#SBATCH -J Genome_Trimmo-2022-03-30-15:15
+#SBATCH -o Genome_Trimmo-2022-03-30.log
+#SBATCH -e Genome_Trimmo-2022-03-30.err
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa
+module load trimmomatic
+
+#Command
+ 
+trimmomatic PE -phred33 /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/genomics_data/Illumina/E745-1.L500_SZAXPI015146-56_1_clean.fq.gz /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/genomics_data/Illumina/E745-1.L500_SZAXPI015146-56_2_clean.fq.gz paired.fq.gz_p1 fq.gz_s1 fq.gz_p2 fq.gz_s2 ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
