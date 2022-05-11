@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core -n 2
+#SBATCH -t 08:00:00
+#SBATCH -J BLAST-28
+#SBATCH --reservation=uppmax2022-2-5_7
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa
+module load blast/2.9.0+
+
+#Command
+makeblastdb -dbtype nucl -in /home/samuel50/Genom_Analysis/Genomic_Data/Reference/sequence.fasta
+blastn -db /home/samuel50/Genom_Analysis/Genomic_Data/Reference/sequence.fasta -query Genome_assembly_Pacbio-30-03-16.38.contigs.fasta -outfmt 6 -out out_BLAST-28.txt

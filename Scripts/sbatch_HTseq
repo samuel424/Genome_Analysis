@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core -n 2
+#SBATCH -t 08:00:00
+#SBATCH -J HT-seq_Serum
+SBACTH --reservation=uppmax2022-2-5_9
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa htseq
+
+cd /home/samuel50/Genom_Analysis/BWA
+
+htseq-count -f bam -r pos -i ID -s no -t CDS Serum-ERR1797969-file.bam Serum-ERR1797970-file.bam Serum-ERR1797971-file.bam /home/samuel50/Genom_Analysis/Prokka/result/mygenome.gff> counts-Serum.txt
+
+

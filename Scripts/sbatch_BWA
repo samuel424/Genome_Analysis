@@ -1,0 +1,39 @@
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core -n 2
+#SBATCH -t 08:00:00
+#SBATCH -J BWA-28
+#SBACTH --reservation=uppmax2022-2-5_8
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa
+
+
+#Command
+
+bwa mem /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797972_pass_1.fastq.gz\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797972_pass_2.fastq.gz | samtools view -bS - > /domus/h1/samuel50/Genom_Analysis/BWA/BH-ERR1797972-file.bam
+
+bwa mem /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797973_pass_1.fastq.gz\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797973_pass_2.fastq.gz | samtools view -bS - > /domus/h1/samuel50/Genom_Analysis/BWA/BH-ERR1797973-file.bam
+
+bwa mem /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797974_pass_1.fastq.gz\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797974_pass_2.fastq.gz | samtools view -bS - > /domus/h1/samuel50/Genom_Analysis/BWA/BH-ERR1797974-file.bam
+
+
+
+bwa mem /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797969_pass_1.fastq.gz\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797969_pass_2.fastq.gz | samtools view -bS - > /domus/h1/samuel50/Genom_Analysis/BWA/Serum-ERR1797969-file.bam
+
+bwa mem /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797970_pass_1.fastq.gz\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797970_pass_2.fastq.gz | samtools view -bS - > /domus/h1/samuel50/Genom_Analysis/BWA/Serum-ERR1797970-file.bam
+
+bwa mem /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797971_pass_1.fastq.gz\
+ /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797971_pass_2.fastq.gz | samtools view -bS - > /domus/h1/samuel50/Genom_Analysis/BWA/Serum-ERR1797971-file.bam

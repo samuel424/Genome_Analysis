@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -t 07:00:00
+#SBATCH -J Mummer-04-08
+#SBATCH -o Mummer-04-08.log
+#SBATCH -e Mummer-04-08.err
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa
+module load mummer
+
+
+
+#Command
+mummerplot -mum /domus/h1/samuel50/Genom_Analysis/Genomic_Data/sequence.fasta /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta
