@@ -65,3 +65,5 @@ trimmomatic PE -phred33 /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/genomi
 fq.gz_s2 ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 
 ```
+![Screenshot 2022-05-11 at 14 02 20](https://user-images.githubusercontent.com/370074/167852586-04161b12-15c3-4a1b-bf7f-5764caac2348.png)
+
