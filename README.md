@@ -5,11 +5,11 @@ This github contains the bioinfromatic scrips and tools inorder to reprduce the 
 
 This is the order of the Scripts for the Analysis, and to how use them:
 
-1.Genome assemmbly with Canu (Pac-Bio data)
+1. Genome assemmbly with Canu (Pac-Bio data)
 Start with the DNA assenmbly with the sbatch job named sbatch_Assembly
 code: sbatch sbatch_Assembly.
 
-2.Reads processing with Trimmomatic (Illumina data)
+2. Reads processing with Trimmomatic (Illumina data)
 code: sbatch sbatch_Trimmo.
 
 3. Check quality with FASTA QC for the Trimmomatic data (before and after) with the following command :
@@ -18,7 +18,7 @@ code: sbatch_FASTAQC
 4. Use BLAST to find genome
 code: sbatch sbatch_BLAST
 
-6.  Mummer and Mummerplot for assembly evaluation
+6. Mummer and Mummerplot for assembly evaluation
 Before running mummerplot the user needs to align a reference with the contigs from the Genome assembly (canu) with mummer.
 code: sbatch sbatch_Mummer
 
