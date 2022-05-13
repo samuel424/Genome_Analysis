@@ -1,3 +1,4 @@
+´´´
 README
 
 This github contains the bioinfromatic scrips and tools inorder to reprduce the pipline of the article "RNA-seq and Tn-seq reveal fitness determinants of vancomycin-resistant Enterococcus faecium during growth in human serum". 
@@ -64,4 +65,4 @@ cut -d$'\t' -f 1,4 counts-Serum.txt >counts-Serum-3.txt
 code: sbatch sbatch_DEseq
 
 
-
+´´´
