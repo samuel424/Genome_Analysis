@@ -1,4 +1,4 @@
-```
+
 README
 
   This github contains the bioinfromatic scrips and tools inorder to reprduce the pipline of the article
@@ -67,4 +67,3 @@ GIT
 
   git clone https://github.com/samuel424/Genom_Analysis.git
 
-```
