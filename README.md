@@ -1,7 +1,8 @@
 ```
 README
 
-  This github contains the bioinfromatic scrips and tools inorder to reprduce the pipline of the article "RNA-seq and Tn-seq reveal fitness determinants of vancomycin-resistant Enterococcus faecium during growth in human serum". 
+  This github contains the bioinfromatic scrips and tools inorder to reprduce the pipline of the article
+  "RNA-seq and Tn-seq reveal fitness determinants of vancomycin-resistant Enterococcus faecium during growth in human serum". 
 
 PIPLINE
 
