@@ -14,7 +14,7 @@ code: sbatch sbatch_Trimmo.
 
 3. Check quality with FASTA QC for the Trimmomatic data (before and after) with the following command :
 
-```
+
 module load bioinfo-tools samtools/0.1.19 bwa
 module load FastQC
 
@@ -23,7 +23,6 @@ fastqc /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/genomics_data/Illumina/
 
 # Quality After
 fastqc /home/samuel50/Genom_Analysis/Genomic_Data/Illumina/Trimmomatic/* -o /home/samuel50/Genom_Analysis/Genomic_Data/Illumina/FASTAQC/Quality_after
-```
 
 4. Use BLAST to find genome
 code: sbatch sbatch_BLAST
@@ -31,7 +30,7 @@ code: sbatch sbatch_BLAST
 6.  Mummer and Mummerplot for assembly evaluation
 Before running mummerplot the user needs to align a reference with the contigs from the Genome assembly (canu) with mummer.
 Use the folloing code in comandline:
-```
+
 module load bioinfo-tools samtools/0.1.19 bwa
 module load MUMmer
 mummer -mum -b -c /domus/h1/samuel50/Genom_Analysis/Genomic_Data/Reference/sequence.fasta /domus/h1/samuel50/Genom_Analysis/Genomic_Data/PACBIO/Complete_Assembly/Complete_Assembly_PACKBIO_30-03-16.38/Genome_assembly_Pacbio-30-03-16.38.contigs.fasta -save mum.txt > ref_qry.mums
@@ -40,7 +39,7 @@ mummer -mum -b -c /domus/h1/samuel50/Genom_Analysis/Genomic_Data/Reference/seque
 
 gnuplot ref_qry.gp
 
-```
+
 
 8. Artemis Comparison Tool (ACT) is another visualization tool especially designed for displaying pairwise comparisons between two or more DNA sequences
 If you want to run Artemis/ACT from Uppmax, you need to keep this into mind:
