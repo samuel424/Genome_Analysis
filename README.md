@@ -67,3 +67,5 @@ GIT
 
   git clone https://github.com/samuel424/Genom_Analysis.git
 
+```
+  13. The file created in from the HTseq sbatch job need to be cut wiiht the folloing code
