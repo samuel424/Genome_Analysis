@@ -1,0 +1,20 @@
+
+#!/bin/bash
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBTACH -n 2
+#SBATCH -t 01:00:00
+#SBATCH -J FASTAQC
+
+#load modules
+module load bioinfo-tools samtools/0.1.19 bwa
+module load FastQC
+
+#Command
+
+# Quality Before
+fastqc /proj/uppmax2022-2-5/Genome_Analysis/1_Zhang_2017/genomics_data/Illumina/* -o /home/samuel50/Genom_Analysis/Genomic_Data/Illumina/FASTAQC/Quality_before
+
+# Quality After
+fastqc /home/samuel50/Genom_Analysis/Genomic_Data/Illumina/Trimmomatic/* -o /home/samuel50/Genom_Analysis/Genomic_Data/Illumina/FASTAQC/Quality_after
