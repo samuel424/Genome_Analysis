@@ -56,7 +56,8 @@ PIPLINE
 
   14 Use DEseq to compute a differential expression analysis between rich medium an heat-inectivated serum codntion
   
-  code: sbatch sbatch_DEseq
+  The DEseq code is an R-script obtained in the Script direcory. Follow this manual for how to use R in uppmax
+  https://www.uppmax.uu.se/support/user-guides/r-user-guide/
 
 CONTACT
 
